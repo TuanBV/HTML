@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <table cellspacing="5" style="margin: auto;">
+            <tr>
+                <th></th>
+                <th><h2>Sell your item here</h2></th>
+            </tr>
+            
+            <tr>
+                <th valign="top">Item title</th>
+                <th>
+                    Here type the title of your book <br>
+                    <input type="text" name="txtItemTitle" id="" style="width: 360px;">
+                </th>
+            </tr>
+            <tr>
+                <th valign="top">Item description</th>
+                <th>
+                    Describe the book details,here like Author, what the book is all about etc. <br> 
+                    A good description is important because the buyers will rea it before the buy your item <br>
+                    <textarea name="" id="" cols="50" rows="3" style="overflow-y: scroll;"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <th valign="top">Item category</th>
+                <th>
+                    Select to which category your item belongs <br>
+                    <input type="radio" name="rdoItem" id="" value="kids"> Kids
+                    <input type="radio" name="rdoItem" id="" value="software"> Software
+                    <input type="radio" name="rdoItem" id="" value="engineering"> Engineering <br>
+                    <input type="radio" name="rdoItem" id="" value="medical"> Medical
+                    <input type="radio" name="rdoItem" id="" value="mythodology"> Mythodology
+                    <input type="radio" name="rdoItem" id="" value="fitness"> Fitness
+                </th>
+            </tr>
+            <tr>
+                <th valign="top">Currency</th>
+                <th>
+                    All amounts will use this currency <br>
+                    <select name="slCurrency" id="" >
+                        <option value="US">US$</option>
+                        <option value="VND">VND</option>
+                        <option value="KRA">KRA</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th valign="top">Price</th>
+                <th>
+                    A buyer will purchase the item at this price <br>
+                    <input type="text" name="txtPrice" id="">
+                </th>
+            </tr>
+            <tr>
+                <th valign="top">Payment charges</th>
+                <th>
+                    Here mention the moe of payments you woud prefer to receive <br>
+                    <input type="checkbox" name="ckbPayment" id="" value="cheque"> Cheque
+                    <input type="checkbox" name="ckbPayment" id="" value="draft"> Draft
+                    <input type="checkbox" name="ckbPayment" id="" value="creditCard"> Credit Card
+                </th>
+            </tr>
+            <tr>
+                <th style="text-align: center;" colspan="2">
+                    <input type="checkbox" name="ckbItem" id="" value="agree"> I have read an agree to the terms an conditions of Creative drago.com
+                </th>
+            </tr>
+            <tr>
+                <th></th>
+                <th style="text-align: center;">
+                    <input type="submit" value="Submit" name="Submit">
+                    <input type="reset" value="Reset" name="Reset">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <style>
+        th{
+            text-align: left;
+            padding-left: 10px;
+        }
+    </style>
+</body>
+</html>

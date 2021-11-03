@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="#" method="post" name="form1">
+    <table style="margin: auto;" cellspacing="5">
+        <tr>
+            <th colspan="2"><h3>Please, do our ITT APTECH SURVEY</h3></th>
+        </tr>
+        <tr>
+            <th>Your Name</th>
+            <th>
+                <input type="text" name="txtName" id="">
+            </th>
+        </tr>
+        <tr>
+            <th>Your Email</th>
+            <th>
+                <input type="email" name="txtEmail" id="">
+            </th>
+        </tr>
+        <tr>
+            <th>Your Batch</th>
+            <th>
+                <select id="" name="slBatch" >
+                    <option value="T0503H">T0503H</option>
+                    <option value="T0402H">T0503K</option>
+                    <option value="T0501H">T0501U</option>
+                </select>
+            </th>
+        </tr>
+        <tr>
+            <th>Modules you learned</th>
+            <td>
+                <input type="checkbox" name="ckbModule" id="" value="cf"> CF
+                <input type="checkbox" name="ckbModule" id="" value="c"> C
+                <input type="checkbox" name="ckbModule" id="" value="html&hdj"> HTML & HDJ 
+                <input type="checkbox" name="ckbModule" id="" value="dreamWeaver"> Dream Weaver
+                <input type="checkbox" name="ckbModule" id="" value="sqlI"> SQL Part I
+                <input type="checkbox" name="ckbModule" id="" value="asp"> ASP
+                <input type="checkbox" name="ckbModule" id="" value="sqlII"> SQL Part II
+            </td>
+        </tr>
+        <tr>
+            <th>Your current module</th>
+            <td>
+                <select name="slModule" id="">
+                    <option value="cf">CF</option>
+                    <option value="c">C</option>
+                    <option value="html">HTML & HDJ</option>
+                    <option value="dreamWeaver">Dream Weaver</option>
+                    <option value="sqlI">SQL Part I</option>
+                    <option value="asp">ASP</option>
+                    <option value="sqlII">SQL Part II</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>Modules you like most</th>
+            <td>
+                <input type="radio" name="rdoModuleLike" id="" value="cf"> CF
+                <input type="radio" name="rdoModuleLike" id="" value="c"> C
+                <input type="radio" name="rdoModuleLike" id="" value="html&hdj"> HTML & HDJ 
+                <input type="radio" name="rdoModuleLike" id="" value="dreamWeaver"> Dream Weaver
+                <input type="radio" name="rdoModuleLike" id="" value="sqlI"> SQL Part I
+                <input type="radio" name="rdoModuleLike" id="" value="asp"> ASP
+                <input type="radio" name="rdoModuleLike" id="" value="sqlII"> SQL Part II
+            </td>
+        </tr>
+        <tr>
+            <th>You use</th>
+            <td>
+                <input type="checkbox" name="ckbYouUse" id="" value="ebook"> Ebooks
+                <input type="checkbox" name="ckbYouUse" id="" value="website"> IT Websites
+                <input type="checkbox" name="ckbYouUse" id="" value="magazines"> Magazines
+                <input type="checkbox" name="ckbYouUse" id="" value="aptechLibrary"> Aptech Library
+                <input type="checkbox" name="ckbYouUse" id="" value="other"> Others
+            </td>
+        </tr>
+        <tr>
+            <th valign="top">You comment</th>
+            <td>
+                <textarea name="txtComment" id="" cols="50" rows="10" style="overflow-y: scroll;"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2" style="padding-top: 20px;">
+                <input type="button" value="Complete your survey" onclick="checkForm()" name="complete">
+                <input type="reset" value="reset" name="reset">
+            </th>
+        </tr>
+    </table>
+</form>
+<style>
+    th{
+        text-align: left;
+    }
+</style>
+<script>
+
+    function checkForm(){
+        var name = document.forms[0].txtName.value;
+        if (name == ''){
+            alert("Bạn cần nhập họ tên !");
+            document.forms[0].txtName.focus();
+            return
+        }
+        var email = document.forms[0].txtEmail.value;
+        if (email == ''){
+            alert("Bạn cần nhập email !");
+            document.forms[0].txtEmail.focus();
+            return
+        }
+        //check Batch
+        if (document.forms[0].ckbModule[0].checked == false && document.forms[0].ckbModule[1].checked == false && document.forms[0].ckbModule[2].checked == false &&
+        document.forms[0].ckbModule[3].checked == false && document.forms[0].ckbModule[4].checked == false && document.forms[0].ckbModule[5].checked == false &&
+        document.forms[0].ckbModule[6].checked == false ){
+            alert("Bạn cần chọn Module !");
+            document.forms[0].ckbModule[0].focus();
+            return
+        }
+        // check Module Like
+        if (document.forms[0].ckbModuleLike[0].checked == false && document.forms[0].ckbModuleLike[1].checked == false && document.forms[0].ckbModuleLike[2].checked == false &&
+        document.forms[0].ckbModuleLike[3].checked == false && document.forms[0].ckbModuleLike[4].checked == false && document.forms[0].ckbModuleLike[5].checked == false &&
+        document.forms[0].ckbModuleLike[6].checked == false ){
+            alert("Bạn cần chọn Module bạn thích!");
+            document.forms[0].ckbModuleLike[0].focus();
+            return
+        }
+        // check You Use
+        if (document.forms[0].ckbYouUse[0].checked == false && document.forms[0].ckbYouUse[1].checked == false && document.forms[0].ckbYouUse[2].checked == false &&
+        document.forms[0].ckbYouUse[3].checked == false && document.forms[0].ckbYouUse[4].checked == false ){
+            alert("Bạn cần hình thức hay sử dụng!");
+            document.forms[0].ckbYouUse [0].focus();
+            return
+        }
+    }
+</script>
+</body>
+</html>

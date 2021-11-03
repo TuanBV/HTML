@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table cellspacing="5">
+            <tr>
+                <th colspan="2"><h2>Your personal Information</h2></th>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="txtFirstName" id=""></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="txtLastName" id=""></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="txtAddress" id="" size="42"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="txtPassword" id=""></td>
+            </tr>
+            <tr>
+                <td>Retype Password</td>
+                <td><input type="password" name="txtRetypePassword" id=""></td>
+            </tr>
+            <tr>
+                <td>Your Email</td>
+                <td><input type="email" name="txtEmail" id="" size="42"></td>
+            </tr>
+            <tr>
+                <td>Sex</td>
+                <td>
+                    <input type="radio" name="rdoSex" id="" value="male"> Male
+                    <input type="radio" name="rdoSex" id="" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Birth of date</td>
+                <td>
+                    Month <input type="number" name="txtMonth" min="1" max="12" placeholder="1" id="">
+                    Day <input type="number" name="txtDay" min="1" max="31" placeholder="1" id="">
+                    Year <input type="number" name="txtYear" min="1900" max="2100" placeholder="2022" id="">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><h2>Your interested language</h2></th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" name="ckbLanguage" id="" value="visualbasic"> Visual Basic
+                    <input type="checkbox" name="ckbLanguage" id="" value="java"> Java
+                    <input type="checkbox" name="ckbLanguage" id="" value="net"> .NET
+                    <input type="checkbox" name="ckbLanguage" id="" value="other"> Others language
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2"><h2>You want to receipt our news on</h2></th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="radio" name="rdoReceipt" id="" value="weekly"> Weekly
+                    <input type="radio" name="rdoReceipt" id="" value="monthly"> Monthly
+                    <input type="radio" name="rdoReceipt" id="" value="every"> Every when news come
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right; padding-right: 50px;">
+                    <input type="submit" value="Submit" name="submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <style>
+        td,h2{
+            text-align: left;
+        }
+        table{
+            margin: auto;
+        }
+    </style>
+</body>
+</html>

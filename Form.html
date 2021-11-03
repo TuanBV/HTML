@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="#" method="post" name="form1">
+    <table style="margin: auto;">
+        <tr>
+            <td>Full name :</td>
+            <td><input type="text" name="txtfullname"></td>
+        </tr>
+        <tr>
+            <td>Password :</td>
+            <td><input type="password" name="txtpassword" id=""></td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Hobbies :</td>
+            <td>
+                <input type="checkbox" name="ckbHobbies" id="" value="reading"> Reading book
+                <input type="checkbox" name="ckbHobbies" id="" value="seafood"> Seafood
+                <input type="checkbox" name="ckbHobbies" id="" value="fruit"> Fruit
+            </td>
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td>
+                <input type="radio" name="rdogender" id="" value="man"> Man
+                <input type="radio" name="rdogender" id="" value="women"> Women
+            </td>
+        </tr>
+        <tr>
+            <td>Hạng thẻ :</td>
+            <td>
+                <select name="sltype" id="">
+                    <option value="vip">VIP</option>
+                    <option value="economy">Economy</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Images : </td>
+            <td>
+                <input type="file" name="imgAvatar" id="" value="imgUser">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">Address :</td>
+            <td>
+                <textarea name="txtAddress" id="" cols="35" rows="10" style="overflow-y: scroll;"></textarea>
+            </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <input type="button" name="" id="" onclick="checkForm()" value="Submit">
+                <input type="reset" name="" id="" value="Reset">
+
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+
+    function checkForm(){
+        var name = document.forms['form1'].txtfullname.value;
+        if (name == ''){
+            alert("Bạn cần nhập họ tên !");
+            document.forms['form1'].txtfullname.focus();
+            return
+        }
+        var password = document.forms['form1'].txtpassword.value;
+        if (password == ''){
+            alert("Bạn cần nhập password !");
+            document.forms['form1'].txtpassword.focus();
+            return
+        }
+
+        //ktra checkbox
+        if(document.forms[0].ckbHobbies[0].checked == false && document.forms[0].ckbHobbies[1].checked == false &&
+        document.forms[0].ckbHobbies[0].checked == false){
+            alert('Bạn cần chọn ít nhất 1 sở thích');
+            document.forms[0].ckbHobbies[0].focus();
+            return
+        }
+        
+        //Ktra radio
+        if(document.forms[0].rdogender[0].checked == false && document.forms[0].rdogender[1].checked == false){
+            alert('Bạn cần chọn giới tính');
+            document.forms[0].rdogender[0].focus();
+            return
+        }
+    
+    }
+</script>
+</body>
+</html>

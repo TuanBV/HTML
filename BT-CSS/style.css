@@ -1,0 +1,16 @@
+h2{
+    text-transform: uppercase;
+    text-decoration: overline;
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    background: orange;
+}
+a:hover{
+    text-decoration: underline;
+    background: pink;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="#" method="post" name="form1">
+    <fieldset style="width:600px">
+        <legend>Personal Information</legend>
+            <table>
+                <tr>
+                    <td>
+                        Last name: <input type="text" name="txtlastname" id="">
+                    </td>
+                    <td>
+                        First name: <input type="text" name="txtfirstname" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" name="rdomale" value="male" id=""> Male
+                        <input type="radio" name="rdomale" value="female" id=""> Female
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Address : 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <textarea name="txtaddress" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+            </table>
+    </fieldset>
+    <fieldset style="width: 600px;">
+        Magazines subscription for
+        <input type="checkbox" name="ckbmagazines" id="" value="time"> TIME
+        <input type="checkbox" name="ckbmagazines" id="" value="newsweek"> Newsweek
+        <input type="checkbox" name="ckbmagazines" id="" value="sunday"> Sunday
+        <input type="checkbox" name="ckbmagazines" id="" value="vogue"> Vogue
+        <input type="checkbox" name="ckbmagazines" id="" value="people"> People
+    </fieldset>
+    <fieldset style="width:600px;">
+        <legend>Duration</legend>
+        <input type="radio" name="rdoduration" value="1year" id=""> 1 Year
+        <input type="radio" name="rdoduration" value="3years" id=""> 3 Years
+        <input type="radio" name="rdoduration" value="5years" id=""> 5 Years
+    </fieldset>
+    <fieldset style="width:600px;">
+        <legend>Payment options</legend>
+        <input type="radio" name="rdopayment" value="demanddraft" id=""> Demand Draft
+        <input type="radio" name="rdopayment" value="creditcard" id=""> Credit Card
+    </fieldset>
+    <br>
+    <input type="button" value="Process" name="Process" onclick="checkForm()">
+    <input type="reset" value="Reset" name="Reset">
+</form>
+<style>
+    form{
+        width: 700px;
+        margin: auto;
+    }
+</style>
+<script>
+    function checkForm(){
+        var lastname = document.forms[0].txtlastname.value;
+        if (lastname == ''){
+            alert("Bạn cần nhập họ tên !");
+            document.forms[0].txtlastname.focus();
+            return
+        }
+        var firstname = document.forms[0].txtfirstname.value;
+        if (firstname == ''){
+            alert("Bạn cần nhập First name !");
+            document.forms[0].txtfirstname.focus();
+            return
+        }
+    }
+</script>
+</body>
+</html>
